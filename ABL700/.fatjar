@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Wed Oct 05 01:16:13 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=D\:\\MEC_HZ\\ABL700\\ABL700_fat.jar
+manifest.mergeall=true
+manifest.mainclass=test.Test01
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
