@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Sep 19 23:54:53 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=D\:\\MEC_HZ\\xmz_bn2\\xmz_bn2.jar
+manifest.mergeall=true
+manifest.mainclass=test.Test1
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=

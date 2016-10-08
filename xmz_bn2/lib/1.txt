@@ -1,0 +1,49 @@
+//逐个检验字符
+	private void testByOne(String text) {
+		str_temp = text;
+		String is_char;
+		for (int i = 0; i < str_temp.length(); i++) {
+			is_char = String.valueOf(str_temp.charAt(i));
+			// 如果收到nak,再次发送
+			if (is_char.equals(Constant.is_nak)) {
+				write2File("received:NAK");
+				sendMsg(lastSend);
+				write2File("send:" + lastSend);
+				return;
+			}
+
+			if (is_char.equals(Constant.is_ack)) {
+				write2File("received:ACK");
+				return;
+			}
+
+			if (is_char.equals(Constant.is_stx)) { // 开始
+				write2File("received:STX");
+				buffer.append(str_temp);
+				if (buffer.length() < 32) {
+					break;
+				}
+			} else if (is_char.equals(Constant.is_etx)) { // 行结束
+				buffer.append(is_char);
+				write2File("received:ETX");
+				final String msg = buffer.toString(); // 不要trim,保留所有符号
+				// 清空缓存
+				judgeMsg(msg);
+			} else {
+				buffer.append(is_char);
+			}
+		}
+	}
+
+	private void query(String msg) {
+		final String text = msg;
+		pool.execute(new Runnable() {
+			@Override
+			public void run() {
+				String communicate = dh.communicate(text);
+				lastSend = communicate;
+				sendMsg(communicate + Constant.is_ack);
+				write2File("J send:" + communicate + Constant.is_ack);
+			}
+		});
+	}
