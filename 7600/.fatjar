@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sat Oct 01 17:57:33 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=D\:\\MEC_HZ\\7600\\7600_fat.jar
+manifest.mergeall=true
+manifest.mainclass=test.Test
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
