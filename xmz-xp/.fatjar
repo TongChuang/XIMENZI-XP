@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Sep 12 15:18:08 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=xmz-xp_fat.jar
+manifest.mergeall=true
+manifest.mainclass=test.Test
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
