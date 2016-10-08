@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Sep 19 23:55:25 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=D\:\\MEC_HZ\\E601\\E601_fat.jar
+manifest.mergeall=true
+manifest.mainclass=test.Test_1
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
